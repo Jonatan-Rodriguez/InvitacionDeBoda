@@ -1,38 +1,37 @@
 (function ($) {
     "use strict";
-      $('.sakura-falling').sakura();
+    $('.sakura-falling').sakura();
 })(jQuery);
 
-
-$(document).on('click', function(){
+$(document).on('click', function () {
     document.getElementById("my_audio").play();
 });
 
 // Set the date we're counting down to
-var countDownDate = new Date("Nov 29, 2022 00:00:00").getTime();
+var countDownDate = new Date("December 17, 2022 20:00:00").getTime();
 
 // Update the count down every 1 second
-var x = setInterval(function() {
+var x = setInterval(function () {
 
     // Get todays date and time
     var now = new Date().getTime();
-    
+
     // Find the distance between now and the count down date
     var distance = countDownDate - now;
-    
+
     // Time calculations for days, hours, minutes and seconds
     var days = Math.floor(distance / (1000 * 60 * 60 * 24));
     var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
     var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
     var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-    
+
     // Output the result in an element with id="demo"
-    document.getElementById("time").innerHTML = "<div class='container'><div class='days block'>"+ days + "<br>Days</div>" + "<div class='hours block'>" + hours + "<br>Hours</div>" + "<div class='minutes block'>" + minutes + "<br>Minutes</div>" + "<div class='seconds block'>" + seconds + "<br>Seconds</div></div>";
-    
+    document.getElementById("time").innerHTML = "<div class='container'><div class='block'><div class='days'>" + days + ":</div><p class='dias'>Dias</p></div>" + "<div class='block'><div class='hours'>" + hours + ":</div><p class='horas'>Horas</p></div>" + "<div class='block'><div class='minutes'>" + minutes + ":</div><p class='minutos'>Minutos</p></div>" + "<div class='block'><div class='seconds'>" + seconds + "</div><p class='segundos'>Segundos</p></div></div>";
+
     // If the count down is over, write some text 
     if (distance < 0) {
         clearInterval(x);
         document.getElementById("time").innerHTML = "¡Bendice a la pareja casada para una vida feliz!";
     }
-}, 1000); 
+}, 1000);
 

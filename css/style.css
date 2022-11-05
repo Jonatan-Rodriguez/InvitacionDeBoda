@@ -335,18 +335,12 @@
 	}
 }
 
-.sakura {
-	/* background: -webkit-linear-gradient(120deg, rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.9));
-    background: linear-gradient(120deg, rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.9));*/
-	background: red;
-	pointer-events: none;
-	position: absolute
-}
 
 .sakura {
+	pointer-events: none;
+	position: absolute;
 	background: #674ea7;
 }
-
 
 /*******************************/
 img {
@@ -358,6 +352,13 @@ img {
 	img {
 		max-width: 30%;
 	}
+}
+
+/*----- section presentacion---------*/
+.presentacion{
+	/* background-image: url(../assets/img/foto3.jpg); */
+	background-color: #9cd4fe;
+	width: 100%;
 }
 
 .top-right-decoration {
@@ -394,15 +395,6 @@ img {
 	line-height: 1;
 }
 
-.dance-med {
-	font-family: 'Dancing Script', cursive;
-	font-weight: bolder;
-	font-style: normal;
-	font-size: 32px;
-	color: #674ea7;
-	margin: 16px;
-	text-align: center;
-}
 
 .title h3 {
 	font-weight: 300;
@@ -415,32 +407,124 @@ img {
 
 .title p {
 	color: #564861;
-	margin: 30px 0 20px;
-	text-transform: uppercase;
 	letter-spacing: 3px;
-	font-size: 16px;
 }
 
 .wrap {
 	display: -webkit-flex;
 	display: flex;
-	-webkit-flex-wrap: wrap;
-	flex-wrap: wrap;
+	/* -webkit-flex-wrap: wrap;
+	flex-wrap: wrap; */
 	-webkit-justify-content: center;
 	justify-content: center;
 	-webkit-align-items: center;
 	align-items: center;
-	/* padding: 20px; */
 	text-align: center;
-	/* min-height:100%; */
 }
 
+.dance-med {
+	font-family: 'Dancing Script', cursive;
+	font-weight: bolder;
+	font-style: normal;
+	font-size: 28px;
+	text-align: center;
+	margin: 0;
+}
 
-/** **/
+/*------------------------------------*/
+
+/*------------- estilo del reloj -----------*/
+#time {
+	display: flex;
+	justify-content: center;
+	width: 50%;
+	height: auto;
+	padding: 10px 0;
+	/* background-color: rgba(255, 255, 41, 0.553); */
+	border:2px solid #fbfbfb;
+	border-radius: 20px;
+	margin: 10px auto;
+}
+
+.container {
+	display: flex;
+	flex-direction: row;
+	justify-items: center;
+}
+
+.block {
+ 	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	color: rgb(192, 97, 97);
+}
+
+.days {
+	color:#145689;
+	font-size: 50px;
+	margin: 0 10px;
+	font-family: 'Great Vibes', cursive;
+	font-weight: bold;
+}
+
+.dias{
+	margin: 0 10px;
+	font-size: 25px;
+	font-family: 'Great Vibes', cursive;
+	font-weight: bold;
+}
+
+.hours {
+	color:#145689;
+	font-size: 50px;
+	margin: 0 10px;
+	font-family: 'Great Vibes', cursive;
+	font-weight: bold;
+}
+
+.horas{
+	margin: 0 10px;
+	font-size: 25px;
+	font-family: 'Great Vibes', cursive;
+	font-weight: bold;
+}
+
+.minutes {
+	color:#145689;
+	font-size: 50px;
+	margin: 0 10px;
+	font-family: 'Great Vibes', cursive;
+	font-weight: bold;
+}
+
+.minutos{
+	margin: 0 10px;
+	font-size: 25px;
+	font-family: 'Great Vibes', cursive;
+	font-weight: bold;
+}
+
+.seconds {
+	color:#145689;
+	font-size: 50px;
+	margin: 0 10px;
+	font-family: 'Great Vibes', cursive;
+	font-weight: bold;
+}
+
+.segundos{
+	margin: 0 10px;
+	font-size: 25px;
+	font-family: 'Great Vibes', cursive;
+	font-weight: bold;
+}
+/*-----------------------------------------------------------------*/
 
 * {
-	/* margin: 0;
-    padding: 0; */
+	margin: 0;
+    padding: 0;
 	font-family: 'Arvo', serif;
 }
 
@@ -474,15 +558,6 @@ body {
 	margin-bottom: 40px;
 }
 
-#time {
-	width: auto;
-	height: auto;
-	padding: 20px;
-	background-color: #eee;
-	border-radius: 20px;
-	font-size: 16px;
-}
-
 .venue {
 	width: auto;
 	height: auto;
@@ -499,38 +574,6 @@ body {
 	color: #fff;
 }
 
-.container {
-	display: grid;
-	grid-template-columns: 1fr 1fr;
-	border-radius: 10px;
-	overflow: hidden;
-}
-
-.block {
-	width: 180px;
-	height: 160px;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	text-align: center;
-	color: #fff;
-}
-
-.days {
-	background: linear-gradient(90deg, #b33a46, #9b313c);
-}
-
-.hours {
-	background: linear-gradient(90deg, #a7c3cd, #90a9b2);
-}
-
-.minutes {
-	background-color: #874562;
-}
-
-.seconds {
-	background-color: #145689;
-}
 
 .date {
 	color: #874562;
@@ -574,10 +617,6 @@ a {
 	font-weight: bold;
 	text-align: center;
 	margin-bottom: 24px;
-}
-
-.twitter {
-	color: #874562;
 }
 
 .music {
