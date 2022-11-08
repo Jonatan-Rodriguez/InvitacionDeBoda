@@ -1,7 +1,7 @@
-(function ($) {
+/* (function ($) {
     "use strict";
     $('.sakura-falling').sakura();
-})(jQuery);
+})(jQuery); */
 
 $(document).on('click', function () {
     document.getElementById("my_audio").play();
