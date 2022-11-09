@@ -7,6 +7,34 @@
     document.getElementById("my_audio").play();
 }); */
 
+//copy paste
+let inputCbu = document.getElementById(`inputCbu`);
+let btnCopyCbu = document.getElementById(`btnCopyCbu`);
+let inputAlias = document.getElementById(`inputAlias`);
+let btnCopyAlias = document.getElementById(`btnCopyAlias`);
+let mensajeCbu = document.getElementById(`mensajeCbu`);
+let mensajeAlias = document.getElementById(`mensajeAlias`);
+
+btnCopyCbu.addEventListener(`click`, ()=>{
+    inputCbu.focus();
+    document.execCommand(`selectAll`);
+    document.execCommand(`copy`);
+    mensajeCbu.style.display="flex";
+    setTimeout(()=>{
+        mensajeCbu.style.display="none";
+    },3000);
+})
+
+btnCopyAlias.addEventListener(`click`, ()=>{
+    inputAlias.focus();
+    document.execCommand(`selectAll`);
+    document.execCommand(`copy`);
+    mensajeAlias.style.display="flex";
+    setTimeout(()=>{
+        mensajeAlias.style.display="none";
+    },3000);
+})
+
 // Set the date we're counting down to
 var countDownDate = new Date("December 17, 2022 20:00:00").getTime();
 
