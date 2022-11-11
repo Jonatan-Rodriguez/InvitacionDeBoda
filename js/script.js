@@ -1,8 +1,3 @@
-/* (function ($) {
-    "use strict";
-    $('.sakura-falling').sakura();
-})(jQuery); */
-
 let music = document.getElementById(`my_audio`);
 const playpause = document.querySelector('.playpause');
 
