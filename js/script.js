@@ -3,9 +3,14 @@
     $('.sakura-falling').sakura();
 })(jQuery); */
 
-/* $(document).on('click', function () {
-    document.getElementById("my_audio").play();
-}); */
+let music = document.getElementById(`my_audio`);
+const playpause = document.querySelector('.playpause');
+
+playpause.addEventListener('click', () => {
+  playpause.classList.toggle('playing');
+
+  music.paused? music.play(): music.pause();
+});
 
 //copy paste
 let inputCbu = document.getElementById(`inputCbu`);

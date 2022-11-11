@@ -371,25 +371,76 @@ a {
 	font-size: var(--fuenteChica);
 	color: var(--colorTexto);
 }
+/*---------- estilos de la section de confirmacion ---------*/
+.confirmacion{
+	width: 100%;
+	background-image: linear-gradient(rgba(5,7,12,0.75),rgba(5,7,12,0.75)), url(../assets/img/quinta.jpg);
+	background-position: center center;
+	background-attachment: fixed;
+	background-size: cover;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: var(--espacioLargo) 0;
+}
 
+.confirmacion__card{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	border: 1px solid white;
+	border-radius: 20px;
+	padding: var(--espacioBase);
+	color: var(--colorTexto);
+	width: var(--espacioContenedor);
+	max-width: 350px;
+}
+
+.confirmacion__card p{
+	font-size: var(--fuenteBase);
+	padding: var(--espacioBase);
+	text-align: center;
+	line-height: var(--espacioLargo);
+}
+/*--------- reproductor ----------*/
+.playpause {
+	padding: 10px;
+	border-radius: 50%;
+	cursor: pointer;
+	transition: 0.3s ease-in-out;
+	position: fixed;
+	bottom: 15px;
+	right:5px;
+	display: block;
+}
+  
+.playpause:hover {
+	background: var(--colorPrimario);
+}
+  
+.playpause .button {
+	width: 15px;
+	height: 15px;
+	background: #f0f0f0;
+	transition: inherit;
+	clip-path: polygon(0 0, 50% 25%, 50% 75%, 50% 75%, 50% 25%, 100% 50%, 100% 50%, 0 100%);
+}
+  
+.playpause.playing .button {
+	clip-path: polygon(0 0, 40% 0, 40% 100%, 60% 100%, 60% 0, 100% 0, 100% 100%, 0 100%);
+}
 /*-------- estilos del footer --------*/
 footer{
-	background-color: darkgray;
+	background-color: var(--colorPrimario);
 	width: 100%;
 	color: white;
 	text-align: center;
 }
 .mensaje{
-	/* background: rgba( 255, 255, 255, 0.4 );
-	box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
-	backdrop-filter: blur( 6px );
-	-webkit-backdrop-filter: blur( 6px );*/
+	font-family: var(--fuenteSecundaria);
 	font-size: 1em;
 } 
-
-/* .music {
-	display: none;
-} */
 
 /* @-webkit-keyframes fall {
 	0% {
